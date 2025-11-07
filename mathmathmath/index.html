@@ -60,35 +60,40 @@
         }
         
         .button-container {
-          margin-top: 50px;
-          align-items: center;
-          justify-content: center;
+            margin-top: 50px;
+            display: flex;               /* ← konieczne, żeby działało centrowanie */
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
-
+        
         .button-container button {
-          margin: 10px;
-          min-width: 120px;
-          max-width: 280px;
-          min-height: 120px;
-          border: 2px solid #ccc;
-          border-radius: 5px;
-          transition: transform 0.3s ease;
-          align-items: center;
-          justify-content: center;
+            display: flex;               /* ← konieczne, żeby treść była centrowana */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            min-width: 120px;
+            max-width: 280px;
+            min-height: 120px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            background-color: white;     /* żeby obraz nie miał szarego tła */
         }
-
+        
         .button-container img {
-          min-width: 100px;
-          max-width: 260px;
-          border-radius: 5px;
-          margin: 5px;
-          align-items: center;
-          justify-content: center;
+            width: 80%;                  /* dopasowanie rozmiaru */
+            border-radius: 5px;
+            display: block;              /* żeby nie zostawiało pustych linii */
+            margin-bottom: 8px;
+        }
+        
+        .button-container button:hover {
+            transform: scale(1.1);
         }
 
-        .button-container button:hover {
-          transform: scale(1.1);
-        }
 
         .tutorial-thumbnail {}
         
