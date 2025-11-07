@@ -1,2 +1,144 @@
 <!DOCTYPE html>
-<html></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathMathMath Tutorials</title>
+    <style>
+      @font-face {
+        font-family: 'WinkySans';
+        src: url('https://maksiurino.github.io/packages/WinkySans-Bold.ttf')
+      }
+        body {
+            font-family: 'WinkySans';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .button-container{
+          display:flex;
+          flex-wrap:wrap;
+          gap:30px;
+          justify-content:center; /* możesz dać center jeśli chcesz cały rząd na środku */
+          padding:40px 160px;         /* dopasuj marginesy */
+        }
+      
+        /* --- KLUCZOWE: przycisk jako flexbox (kolumna) --- */
+        .button-container button{
+          display:flex;
+          align-items:center;            /* poziome centrowanie zawartości */
+          justify-content:center;        /* pionowe centrowanie zawartości */
+          width:260px;
+          height:240px;
+          padding:12px;
+          border:2px solid #ddd;
+          border-radius:8px;
+          background:#fff;
+          cursor:pointer;
+          box-sizing:border-box;
+          overflow:hidden;
+        }
+      
+        /* Wewnętrzny div ustawiony też na kolumnę, aby obraz nad tekstem i centrowane razem */
+        .button-container button > div{
+          display:flex;
+          flex-direction:column;
+          align-items:center;       /* poziome centrowanie obraz+tekst wewnątrz div */
+          justify-content:center;   /* pionowe centrowanie obraz+tekst wewnątrz div */
+          width:100%;
+          height:100%;
+          text-align:center;
+          gap:8px;
+        }
+      
+        /* Obraz jako blok i dopasowany szerokością procentową (zachowuje proporcje) */
+        .button-container img{
+          display:block;           /* usuwa inline-gap pod obrazem */
+          width:100%;               /* dopasuj ile miejsca ma zajmować obraz w przycisku */
+          height:auto;
+          border-radius:6px;
+          object-fit:cover;
+        }
+      
+        .button-container .caption{
+          font-size:13px;
+          color:#111;
+          line-height:1.1;
+        }
+      
+        /* nawigacja hover */
+        .button-container button:hover{
+          transform:translateY(-4px);
+          box-shadow:0 8px 18px rgba(0,0,0,0.12);
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>3D Tutorial (Part 1) - Introduction</h1>
+    </header>
+
+    <main>
+      <section>
+        <h1>Contents</h1>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+        </ul>
+        <br>
+        <h2 id="intro">1. Introduction</h2>
+        <h3>Welcome to the 3D Pen Graphics series!</p>
+        <br>
+        <p>In this series, we'll learn how to make a 3D wireframe engine.</p>
+        <p>Wireframe is a type of 3D where only edges are drawn.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 maksiurino.github.io. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
