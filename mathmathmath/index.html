@@ -63,17 +63,20 @@
           margin-top: 50px;
         }
 
-        .button-container button {
+        .button-container img {
           margin: 10px;
           max-width: 120px;
+          min-height: 120px;
           border: 2px solid #ccc;
           border-radius: 5px;
           transition: transform 0.3s ease;
         }
 
-        .button-container button:hover {
+        .button-container img:hover {
           transform: scale(1.1);
         }
+
+        .tutorial-thumbnail {}
     </style>
   </head>
   <body>
@@ -85,11 +88,11 @@
       <section>
         <h2>Tutorials</h2>
         <div class="button-container">
-          <button>3D Tutorial (Part 1) - Introduction</button>
-          <button>3D Tutorial (Part 2) - The Camera</button>
-          <button>3D Tutorial (Part 3) - Lines</button>
-          <button>3D Tutorial (Part 4) - Line Clipping</button>
-          <button>3D Tutorial (Part 5) - Camera Rotation</button>
+          <button class="tutorial-thumbnail">3D Tutorial (Part 1) - Introduction</button>
+          <button class="tutorial-thumbnail">3D Tutorial (Part 2) - The Camera</button>
+          <button class="tutorial-thumbnail">3D Tutorial (Part 3) - Lines</button>
+          <button class="tutorial-thumbnail">3D Tutorial (Part 4) - Line Clipping</button>
+          <button class="tutorial-thumbnail">3D Tutorial (Part 5) - Camera Rotation</button>
         </div>
       </section>
     </main>
