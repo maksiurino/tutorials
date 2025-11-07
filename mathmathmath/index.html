@@ -59,53 +59,62 @@
             bottom: 0;
         }
         
-        .button-container {
-          margin-top: 50px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 20px;
+        .button-container{
+          display:flex;
+          flex-wrap:wrap;
+          gap:30px;
+          justify-content:flex-start; /* możesz dać center jeśli chcesz cały rząd na środku */
+          padding:40px 160px;         /* dopasuj marginesy */
         }
-        
-        .button-container button {
-          display: flex;
-          flex-direction: column;         /* obraz nad tekstem */
-          align-items: center;            /* poziome wyśrodkowanie */
-          justify-content: center;        /* pionowe wyśrodkowanie */
-          margin: 10px;
-          width: 260px;
-          height: 200px;
-          border: 2px solid #ccc;
-          border-radius: 10px;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          background-color: #fff;
-          cursor: pointer;
-          text-align: center;
-          overflow: hidden;
+      
+        /* --- KLUCZOWE: przycisk jako flexbox (kolumna) --- */
+        .button-container button{
+          display:flex;
+          align-items:center;            /* poziome centrowanie zawartości */
+          justify-content:center;        /* pionowe centrowanie zawartości */
+          width:260px;
+          height:200px;
+          padding:12px;
+          border:2px solid #ddd;
+          border-radius:8px;
+          background:#fff;
+          cursor:pointer;
+          box-sizing:border-box;
+          overflow:hidden;
         }
-        
-        .button-container button:hover {
-          transform: scale(1.05);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      
+        /* Wewnętrzny div ustawiony też na kolumnę, aby obraz nad tekstem i centrowane razem */
+        .button-container button > div{
+          display:flex;
+          flex-direction:column;
+          align-items:center;       /* poziome centrowanie obraz+tekst wewnątrz div */
+          justify-content:center;   /* pionowe centrowanie obraz+tekst wewnątrz div */
+          width:100%;
+          height:100%;
+          text-align:center;
+          gap:8px;
         }
-        
-        .button-container img {
-          width: 80%;
-          height: auto;
-          border-radius: 6px;
-          margin-bottom: 8px;
-          display: block;
+      
+        /* Obraz jako blok i dopasowany szerokością procentową (zachowuje proporcje) */
+        .button-container img{
+          display:block;           /* usuwa inline-gap pod obrazem */
+          width:72%;               /* dopasuj ile miejsca ma zajmować obraz w przycisku */
+          height:auto;
+          border-radius:6px;
+          object-fit:cover;
         }
-        
-        .button-container div {
-          font-size: 14px;
-          color: #000;
-          line-height: 1.2;
+      
+        .button-container .caption{
+          font-size:13px;
+          color:#111;
+          line-height:1.1;
         }
-
-        .tutorial-thumbnail {}
-        
-        .caption{color:#fff;font-size:13px;text-align:center;margin-top:10px;opacity:0.9}
+      
+        /* nawigacja hover */
+        .button-container button:hover{
+          transform:translateY(-4px);
+          box-shadow:0 8px 18px rgba(0,0,0,0.12);
+        }
     </style>
   </head>
   <body>
@@ -117,28 +126,28 @@
       <section>
         <h2>Tutorials</h2>
         <div class="button-container">
-          <button class="tutorial-thumbnail">
+          <button>
             <div>
               <img src="https://maksiurino.github.io/tutorials/mathmathmath/assets/thumbnail1.png" />
               3D Tutorial (Part 1) - Introduction
             </div>
           </button>
-          <button class="tutorial-thumbnail">
+          <button>
             <div>
               3D Tutorial (Part 2) - The Camera
             </div>
           </button>
-          <button class="tutorial-thumbnail">
+          <button>
             <div>
               3D Tutorial (Part 3) - Lines
             </div>
           </button>
-          <button class="tutorial-thumbnail">
+          <button>
             <div>
               3D Tutorial (Part 4) - Line Clipping
             </div>
           </button>
-          <button class="tutorial-thumbnail">
+          <button>
             <div>
               3D Tutorial (Part 5) - Camera Rotation
             </div>
