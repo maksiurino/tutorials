@@ -137,6 +137,17 @@
         .subject-header {
           color: #f8e43c;
         }
+
+        .tutorial-contents {
+          align-items: left;
+          justify-content: left;
+          text-align: left;
+          padding: 50px 0px;
+        }
+
+        .note {
+          color: gray;
+        }
     </style>
   </head>
   <body>
@@ -146,7 +157,7 @@
 
     <main>
       <section>
-        <table class="contents">
+        <table class="contents tutorial-contents">
           <tr>
             <th>Contents</th>
           </tr>
@@ -158,38 +169,42 @@
           </tr>
         </table>
         <br>
-        <h2 id="intro" class="subject-header">1. Introduction</h2>
-        <h3 class="green">Welcome to the 3D Pen Graphics series!</h3>
-        <br>
-        In this series, we'll learn how to make a 3D wireframe engine.
-        Wireframe is a type of 3D where only edges are drawn.
-        <br>
-        <h2 id="start2d">1-1. Starting with 2D</h2>
-        <h3 class="subject-header">2D Basics</h3>
-        In 2D, every point has 2 coordinates: <span class="blue">x, y</span>
-        <br>
-        <object type="image/svg+xml" data="https://maksiurino.github.io/tutorials/mathmathmath/assets/3d-part1-intro/coordinates2d.svg" width="128" height="128"></object>
-        <br>
-        Since your monitor is 2D, it's very easy to display a 2D shape on the screen.
-        <br>
-        Let's create a simple program to draw a 2D rectangle. Later, we'll modify the program to work in 3D.
-        <br>
-        <h3 class="subject-header">2D Rectangle Program (Part 1)</h3>
-        1) Make a custom block called "Render":
-        <br>
-        <br>
-        <img src="https://maksiurino.github.io/tutorials/mathmathmath/assets/3d-part1-intro/screenshot1.png" alt='Creating a block, named "Render", with "Run without screen refresh" enabled.' />
-        <br>
-        <br>
-        <span class="blue">Enable "Run w/o screen refresh" so that block runs instantly.</span>
-        <br>
-        <h3 class="subject-header">2D Rectangle Program (Part 2)</h3>
-        2) Create these scripts:
-        <br>
-        <br>
-        <img src="https://maksiurino.github.io/tutorials/mathmathmath/assets/3d-part1-intro/script1.png" alt="Script" width="392" />
-        <br>
-        <br>
+        <div>
+          <h2 id="intro" class="subject-header">1. Introduction</h2>
+          <h3 class="green">Welcome to the 3D Pen Graphics series!</h3>
+          <br>
+          In this series, we'll learn how to make a 3D wireframe engine.
+          Wireframe is a type of 3D where only edges are drawn.
+          <br>
+          <h2 id="start2d">1-1. Starting with 2D</h2>
+          <h3 class="subject-header">2D Basics</h3>
+          In 2D, every point has 2 coordinates: <span class="blue">x, y</span>
+          <br>
+          <object type="image/svg+xml" data="https://maksiurino.github.io/tutorials/mathmathmath/assets/3d-part1-intro/coordinates2d.svg" width="128" height="128"></object>
+          <br>
+          Since your monitor is 2D, it's very easy to display a 2D shape on the screen.
+          <br>
+          Let's create a simple program to draw a 2D rectangle. Later, we'll modify the program to work in 3D.
+          <br>
+          <h3 class="subject-header">2D Rectangle Program (Part 1)</h3>
+          1) Make a custom block called "Render":
+          <br>
+          <br>
+          <img src="https://maksiurino.github.io/tutorials/mathmathmath/assets/3d-part1-intro/screenshot1.png" alt='Creating a block, named "Render", with "Run without screen refresh" enabled.' />
+          <br>
+          <br>
+          <span class="blue">Enable "Run w/o screen refresh" so that block runs instantly.</span>
+          <br>
+          <h3 class="subject-header">2D Rectangle Program (Part 2)</h3>
+          2) Create these scripts:
+          <br>
+          <br>
+          <img src="https://maksiurino.github.io/tutorials/mathmathmath/assets/3d-part1-intro/script1.png" alt="Script" width="392" />
+          <br>
+          <br>
+          Run the program, and you should see a rectangle on your screen!
+          <span class="note">(More specifically, a square...)</span>
+        </div>
       </section>
     </main>
 
